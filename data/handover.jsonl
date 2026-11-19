@@ -1,0 +1,2 @@
+{"id":"H1","asset":"A001","known_at":"2026-09-20T09:00:00+08:00","kind":"inspection_failed","need":"N1","note":"独立检测确认无法用于办公套件"}
+{"id":"H2","asset":"A003","known_at":"2026-09-22T09:00:00+08:00","kind":"return_requested","need":"N3","note":"接收用途变化，需要重新核对"}

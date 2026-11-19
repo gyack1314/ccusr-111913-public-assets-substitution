@@ -1,0 +1,10 @@
+{"id":"O0","asset":"A001","department":"D0","until_day":"2026-09-05","return_check_days":2,"transport_days":1}
+{"id":"O5","asset":"A006","department":"D0","until_day":"2026-09-10","return_check_days":2,"transport_days":1}
+{"id":"O10","asset":"A011","department":"D0","until_day":"2026-09-15","return_check_days":2,"transport_days":1}
+{"id":"O15","asset":"A016","department":"D0","until_day":"2026-09-08","return_check_days":2,"transport_days":1}
+{"id":"O20","asset":"A021","department":"D0","until_day":"2026-09-13","return_check_days":2,"transport_days":1}
+{"id":"O25","asset":"A026","department":"D0","until_day":"2026-09-06","return_check_days":2,"transport_days":1}
+{"id":"O30","asset":"A031","department":"D0","until_day":"2026-09-11","return_check_days":2,"transport_days":1}
+{"id":"O35","asset":"A036","department":"D0","until_day":"2026-09-16","return_check_days":2,"transport_days":1}
+{"id":"O40","asset":"A041","department":"D0","until_day":"2026-09-09","return_check_days":2,"transport_days":1}
+{"id":"O45","asset":"A046","department":"D0","until_day":"2026-09-14","return_check_days":2,"transport_days":1}

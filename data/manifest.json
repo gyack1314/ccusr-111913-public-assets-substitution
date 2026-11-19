@@ -1,0 +1,118 @@
+{
+  "project": "public-assets-substitution",
+  "version": "2026-09-synthetic-v1",
+  "synthetic": true,
+  "tables": [
+    {
+      "name": "assets",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "实物身份",
+        "kind": "资产类别",
+        "model": "型号",
+        "state": "资料所知状态",
+        "available_day": "最早释放日",
+        "condition_score": "检测得分，未知为空",
+        "repair_cents": "已报价维修费",
+        "repair_days": "维修所需日数",
+        "location": "存放地"
+      },
+      "path": "data/assets.jsonl",
+      "rows": 48,
+      "sha256": "76fdf572f068c30caf3c939ba8d35566ace81dca2e5e0cd02db8bc66b6bd93e6"
+    },
+    {
+      "name": "needs",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "需求身份",
+        "department": "接收部门",
+        "usage": "用途",
+        "quantities": "成套必需件数",
+        "splittable": "是否允许分期逐项交付",
+        "start_day": "使用起日",
+        "end_day": "使用止日含当天",
+        "priority": "数字越小优先级越高",
+        "deadline": "最晚到齐日",
+        "procurement_id": "采购批准引用"
+      },
+      "path": "data/needs.jsonl",
+      "rows": 15,
+      "sha256": "1c53f26234f9f16e9e6b1c004a2373e26f7b47e5f6f702bcd94e4e4dbd88744c"
+    },
+    {
+      "name": "compatibility",
+      "key": "id",
+      "refs": {},
+      "fields": {
+        "id": "兼容声明",
+        "usage": "用途",
+        "left_model": "设备型号",
+        "right_model": "配套型号",
+        "compatible": "已确认能否搭配",
+        "known_at": "依据到达时间"
+      },
+      "path": "data/compatibility.jsonl",
+      "rows": 36,
+      "sha256": "c005ecebd20b2e396357f4f58e83fc6ed4b042f56e02e5a1953bca844d0f7ebd"
+    },
+    {
+      "name": "occupancies",
+      "key": "id",
+      "refs": {
+        "asset": "assets"
+      },
+      "fields": {
+        "id": "占用身份",
+        "asset": "实物",
+        "department": "现用部门",
+        "until_day": "使用至该日",
+        "return_check_days": "返还后检测日数",
+        "transport_days": "运输日数"
+      },
+      "path": "data/occupancies.jsonl",
+      "rows": 10,
+      "sha256": "99b762f824d0ff0cfc014e9a619e75e632bf5034bd49756ab48395a6c8461dc3"
+    },
+    {
+      "name": "procurement",
+      "key": "id",
+      "refs": {
+        "need": "needs"
+      },
+      "fields": {
+        "id": "采购批准",
+        "need": "被批准需求",
+        "approved": "是否已获准新购",
+        "comparable_cents": "对应整组可比新购价",
+        "delivery_cents": "必要交付安装费",
+        "shared_trip": "共用搬运计费组",
+        "trip_cents": "整组一次搬运总费用"
+      },
+      "path": "data/procurement.jsonl",
+      "rows": 15,
+      "sha256": "b6982b64a9556caf421124f5d8baec2c2556482e127cda63123ca83faa30a566"
+    },
+    {
+      "name": "handover",
+      "key": "id",
+      "refs": {
+        "asset": "assets",
+        "need": "needs"
+      },
+      "fields": {
+        "id": "交接补充身份",
+        "asset": "实物",
+        "known_at": "获知时间",
+        "kind": "交接事实",
+        "need": "需求",
+        "note": "业务说明"
+      },
+      "path": "data/handover.jsonl",
+      "rows": 2,
+      "sha256": "9d406d30d52b36025e12405f8fcaac9a55f46136ba571719ab29291552b1d13f"
+    }
+  ]
+}
